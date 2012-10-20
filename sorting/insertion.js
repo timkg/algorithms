@@ -13,7 +13,6 @@ define([], function(){
 			var currentIndex
 			  , currentValue
 			  , leftIndex
-			  , tempValue;
 			for(currentIndex = 1; currentIndex < len; currentIndex++) {
 				leftIndex = currentIndex - 1;
 				currentValue = inputArray[currentIndex];
