@@ -29,7 +29,7 @@ define([], function(){
 
 		reverseSort: function( inputArray ) {
 			if( Object.prototype.toString.call( inputArray ) != '[object Array]' ) {
-				throw new Error("insertion.sort() called on something that is not an array.");
+				throw new Error("insertion.reverseSort() called on something that is not an array.");
 			}
 			var len = inputArray.length;
 			if(len < 2) {
