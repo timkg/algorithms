@@ -1,0 +1,9 @@
+{
+  "author": "",
+  "name": "Algorithms",
+  "version": "0.0.0",
+  "dependencies": {
+  	"amdefine": ">=0.0.2"
+  	},
+  "devDependencies": {}
+}
