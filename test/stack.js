@@ -30,5 +30,43 @@ describe("Stack data structure", function() {
 			assert.equal(typeof stack1.pop, "function");
 		})
 	})
-
+	describe("Stack.isEmpty() method", function() {
+		it("should return true for a new stack", function() {
+			var stack1 = new Stack();
+			assert.equal(stack1.isEmpty(), true);
+		})
+		it("should return false for a stack with elements", function() {
+			var stack1 = new Stack();
+			stack1.push( 1 );
+			assert.equal(stack1.isEmpty(), false);
+		})
+	})
+	describe("Stack.top property", function() {
+		it("should be set to -1 for a new stack", function() {
+			var stack1 = new Stack();
+			assert.equal(stack1.top, -1);
+		})
+	})
+	describe("Stack.push() method", function() {
+		it("should return the inserted element", function() {
+			var stack1 = new Stack();
+			assert.equal(stack1.push('a'), 'a');
+		})
+		it("should increase the top property by one", function() {
+			var stack1 = new Stack();
+			stack1.push(1);
+			assert.equal(stack1.top, 0);
+		})
+	})
+	describe("Stack.pop() method", function() {
+		it("should return null for a new stack", function() {
+			var stack1 = new Stack();
+			assert.equal(stack1.pop(), null);
+		})
+		it("should return the last element added to a stack", function() {
+			var stack1 = new Stack();
+			stack1.push('a');
+			assert.equal(stack1.pop(), 'a');
+		})
+	})
 })

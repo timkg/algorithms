@@ -7,10 +7,20 @@ define([], function(){
 		var elements = [];
 
 		// public
-		this.top = 0;
-		this.isEmpty = function() {};
-		this.push = function() {};
-		this.pop = function() {};
+		this.top = -1;
+		this.isEmpty = function() {
+			return (this.top === -1 ? true : false);
+		};
+		this.push = function( element ) {
+			elements[++this.top] = element;
+			return element;
+		};
+		this.pop = function() {
+			if( this.top === -1 ) {
+				return null;
+			}
+			return elements[this.top--];
+		};
 	};
 
 	return Stack;
