@@ -46,6 +46,14 @@ describe("Stack data structure", function() {
 			var stack1 = new Stack();
 			assert.equal(stack1.top, -1);
 		})
+		it("should hold the index of the last element", function() {
+			var stack1 = new Stack();
+			stack1.push('a');
+			stack1.push('b');
+			stack1.push('c');
+			stack1.push('d');
+			assert.equal(stack1.top, 3);
+		})
 	})
 	describe("Stack.push() method", function() {
 		it("should return the inserted element", function() {
@@ -67,6 +75,10 @@ describe("Stack data structure", function() {
 			var stack1 = new Stack();
 			stack1.push('a');
 			assert.equal(stack1.pop(), 'a');
+			stack1.push('b');
+			stack1.push('c');
+			stack1.push('d');
+			assert.equal(stack1.pop(), 'd');
 		})
 	})
 })
