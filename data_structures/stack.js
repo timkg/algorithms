@@ -1,24 +1,18 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module) }
 
 define([], function(){
-	var stack = (function() {
+	var Stack = function() {
 
-		var top = 0
-		  , elements = [];
+		// private
+		var elements = [];
 
-		function isEmpty() {};
-		function push() {};
-		function pop() {};
-		
-		return {
-			top: top
-			, isEmpty: isEmpty
-			, push: push
-			, pop: pop
-		}
-	
-	})();
+		// public
+		this.top = 0;
+		this.isEmpty = function() {};
+		this.push = function() {};
+		this.pop = function() {};
+	};
 
-	return stack;
+	return Stack;
 })
 
